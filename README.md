@@ -20,8 +20,8 @@ npm run build --report
 # 页面
 官方demo：http://mozilla.github.io/pdf.js/web/viewer.html<br>
 1. 预览本地pdf<br>
- 将viewer.js 的 10053 放开，10054注释，输入路径 http://localhost:8080/static/pdf/web/viewer.html
- 或者  访问  http://localhost:8080/static/pdf/web/viewer.html?file=/static/pdf/web/demo.pdf
+- 1.将viewer.js 的 10053 放开，10054注释，输入路径 http://localhost:8080/static/pdf/web/viewer.html
+- 2.访问  http://localhost:8080/static/pdf/web/viewer.html?file=/static/pdf/web/demo.pdf
 2. 预览服务器的pdf<br>
 2.1  let url = 'http://somedomain/doc/manuals/R-intro.pdf'<br>
 2.2  let url = 'http://image.cache.timepack.cn/nodejs.pdf'<br>
