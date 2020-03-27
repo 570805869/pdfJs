@@ -17,6 +17,10 @@ npm run build
 # build for production and view the bundle analyzer report
 npm run build --report
 ```
+文档：
+[guide](http://vuejs-templates.github.io/webpack/) <br>
+[docs for vue-loader](http://vuejs.github.io/vue-loader)
+
 # 页面
 > 官方demo：http://mozilla.github.io/pdf.js/web/viewer.html<br>
 ### 1. 预览本地pdf
@@ -37,27 +41,4 @@ Unexpected server response (0) while retrieving PDF "http://somedomain/doc/manua
 猜测会有人报'file origin does not match viewer.js' 我没报的原因是我简单粗暴的将viewer.js的1863行注释了！
 但是配置服务器允许跨域不安全也不好，so，这就需要后台来配合了<br>
 后台需要返回你一个流的形式的pdf，pdf.js插件是可以识别的，也不会报跨域问题！！！ <br>
-  - 3.let url = 'https://dluat.hscf.com/api/esm/v1/contractTemplates/load/c08def54aa40412b8b511406fc0271d2/0?access_token=b6cce0c8428c55531d206b4f008fe44e&name=cehsi.pdf'<br>
-将上面的url放入浏览器直接 是以流的形式呈现出来，例如下面的乱码形式：<br>
-
->%PDF-1.4<br>
->5 0 obj<br>
-><<
->/Type /Page<br>
->/Parent 3 0 R<br>
->/Resources 4 0 R<br>
->/Contents 6 0 R<br>
->/MediaBox[ 0 0 595.3 841.9 ]<br>
->/CropBox[ 0 0 595.3 841.9 ]<br>
->/Rotate 0<br>
->>>
->endobj<br>
->6 0 obj<br>
-><< /Length 273 /Filter /FlateDecode >><br>
-.......还有很多这种码<br>
-这种带有参数的url必须编码，encodeURIComponent了解一下，当然以流的方式在浏览器打开是进行下载的，pdf.js也是可以进行预览，而不下载。<br>
-
-// 启动项目<br>
-npm install or cnpm install<br>
-npm run dev<br>
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+- 3.还有一个是文档流格式，具体查看代码
